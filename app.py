@@ -8,8 +8,6 @@ from resources.user import UserRegister
 from resources.item import Item, ItemList
 from resources.store import Store, StoreList
 
-
-
 app = Flask(__name__)
 app.secret_key = 'intuition'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
@@ -26,5 +24,4 @@ api.add_resource(ItemList, '/items')
 api.add_resource(UserRegister, '/register')
 
 if __name__ == '__main__':
-
     app.run(port=5000, debug=True)
